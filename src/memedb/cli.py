@@ -38,12 +38,12 @@ logging.basicConfig(
     format="%(message)s",
     handlers=[RichHandler(rich_tracebacks=True)]
 )
-log = logging.getLogger("memedb")
+log = logging.getLogger("memesdb")
 
 console = Console()
 app = typer.Typer()
 
-DB_PATH_STR = os.getenv("MEMEDB_PATH", "~/.local/share/memedb/memes.db")
+DB_PATH_STR = os.getenv("MEMESDB_PATH", "~/.local/share/memesdb/memes.db")
 DB_PATH = Path(DB_PATH_STR).expanduser()
 
 # Detect OS for clipboard ops
@@ -373,7 +373,7 @@ def stats():
     # get db file size
     db_size = DB_PATH.stat().st_size
 
-    console.print("\n[bold cyan]📊 memedb stats[/]\n")
+    console.print("\n[bold cyan]📊 memesdb stats[/]\n")
     console.print(f"📑 total entries: [yellow]{counts[0]:,}[/]")
     console.print(f"🖼️  unique images: [yellow]{counts[2]:,}[/]")
     console.print(f"💾 database size: [yellow]{db_size / 1024 / 1024:.1f}MB[/]")

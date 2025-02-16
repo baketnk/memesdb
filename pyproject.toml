@@ -6,15 +6,20 @@ build-backend = "hatchling.build"
 requires-external = [
         "vips >= 8.0",  # adjust version number as needed
 ]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["memesdb"]
 
 [project]
-name = "memedb"
+name = "memesdb"
 version = "0.1.0"
 authors = [
     { name="baketnk", email="baketnk@protonmail.com" },
 ]
 description = "index and search your meme stash with ai"
 readme = "README.md"
+license-files = [ "LICENSE" ]
 requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -35,8 +40,8 @@ dependencies = [
 ]
 
 [project.scripts]
-memedb = "memedb.cli:app"
+memesdb = "memesdb.cli:app"
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/memedb"
-"Bug Tracker" = "https://github.com/yourusername/memedb/issues"
+"Homepage" = "https://github.com/yourusername/memesdb"
+"Bug Tracker" = "https://github.com/yourusername/memesdb/issues"

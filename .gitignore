@@ -21,3 +21,4 @@ wheels/
 MANIFEST
 .lnvim
 .DS_Store
+.lnvim/

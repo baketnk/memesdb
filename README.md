@@ -1,29 +1,29 @@
-# MemeDB 🗄️✨
+# MemesDB 🗄️✨
 
 index and search your meme stash with ai
 
 ## install
 ```bash
-pip install memedb
+pip install memesdb
 ```
 
 or use `uv tool`
 
-`uv tool install memedb`
+`uv tool install memesdb`
 
 ## usage
 ```bash
 # index a directory of memes
-memedb index ~/Downloads/memes
+memesdb index ~/Downloads/memes
 
 # search your collection
-memedb search "cat wearing sunglasses"
+memesdb search "cat wearing sunglasses"
 
 # add custom tags (more coming soon)
-memedb tag
+memesdb tag
 
 # check DB stats
-memedb stats
+memesdb stats
 ```
 
 ## features
