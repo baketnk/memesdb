@@ -13,7 +13,7 @@ packages = ["memesdb"]
 
 [project]
 name = "memesdb"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
     { name="baketnk", email="baketnk@protonmail.com" },
 ]
