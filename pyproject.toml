@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+requires-external = [
+        "vips >= 8.0",  # adjust version number as needed
+]
+
+[project]
+name = "memedb"
+version = "0.1.0"
+authors = [
+    { name="baketnk", email="baketnk@protonmail.com" },
+]
+description = "index and search your meme stash with ai"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "typer",
+    "rich",
+    "Pillow",
+    "sentence-transformers",
+    "sqlite-vec",
+    "fzf.py",
+    "pyvips",
+    "einops",
+    "moondream",
+    "imagehash",
+]
+
+[project.scripts]
+memedb = "memedb.cli:app"
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/memedb"
+"Bug Tracker" = "https://github.com/yourusername/memedb/issues"
